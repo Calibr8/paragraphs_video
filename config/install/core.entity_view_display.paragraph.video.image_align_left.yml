@@ -1,0 +1,138 @@
+uuid: 785574d5-b92a-4309-8319-fe079a026f14
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.image_align_left
+    - field.field.paragraph.video.field_background
+    - field.field.paragraph.video.field_border
+    - field.field.paragraph.video.field_call_to_action
+    - field.field.paragraph.video.field_paragraph_width
+    - field.field.paragraph.video.field_subtitle
+    - field.field.paragraph.video.field_subtitle_style
+    - field.field.paragraph.video.field_text
+    - field.field.paragraph.video.field_text_align
+    - field.field.paragraph.video.field_title
+    - field.field.paragraph.video.field_title_align
+    - field.field.paragraph.video.field_title_style
+    - field.field.paragraph.video.field_video
+    - field.field.paragraph.video.field_view_mode
+    - paragraphs.paragraphs_type.video
+  module:
+    - calibr8_ds
+    - ds
+    - link
+    - text
+    - youtube
+third_party_settings:
+  ds:
+    layout:
+      id: twocol
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          header: header
+          column_1: div
+          column_2: div
+          footer: footer
+        outer_wrapper: section
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      header:
+        - field_title
+        - field_subtitle
+      column_1:
+        - field_video
+      column_2:
+        - field_text
+      footer:
+        - field_call_to_action
+id: paragraph.video.image_align_left
+targetEntityType: paragraph
+bundle: video
+mode: image_align_left
+content:
+  field_call_to_action:
+    weight: 4
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: footer
+  field_subtitle:
+    weight: 1
+    label: hidden
+    settings:
+      title_element: field_subtitle_style
+      title_class: field--subtitle
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+    type: title_element
+    region: header
+  field_text:
+    weight: 3
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    type: text_trimmed
+    region: column_2
+  field_title:
+    weight: 0
+    label: hidden
+    settings:
+      title_element: field_title_style
+      title_class: field--title
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+    type: title_element
+    region: header
+  field_video:
+    weight: 2
+    label: hidden
+    settings:
+      youtube_size: responsive
+      youtube_width: ''
+      youtube_height: ''
+      youtube_autoplay: false
+      youtube_loop: false
+      youtube_showinfo: false
+      youtube_controls: false
+      youtube_autohide: false
+      youtube_iv_load_policy: false
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+    type: youtube_video
+    region: column_1
+hidden:
+  field_background: true
+  field_border: true
+  field_paragraph_width: true
+  field_subtitle_style: true
+  field_text_align: true
+  field_title_align: true
+  field_title_style: true
+  field_view_mode: true

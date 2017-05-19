@@ -1,0 +1,190 @@
+uuid: 30bb8c89-4495-4b97-b56a-6f71f5e0cc84
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.video.field_background
+    - field.field.paragraph.video.field_border
+    - field.field.paragraph.video.field_call_to_action
+    - field.field.paragraph.video.field_paragraph_width
+    - field.field.paragraph.video.field_subtitle
+    - field.field.paragraph.video.field_subtitle_style
+    - field.field.paragraph.video.field_text
+    - field.field.paragraph.video.field_text_align
+    - field.field.paragraph.video.field_title
+    - field.field.paragraph.video.field_title_align
+    - field.field.paragraph.video.field_title_style
+    - field.field.paragraph.video.field_video
+    - field.field.paragraph.video.field_view_mode
+    - paragraphs.paragraphs_type.video
+  module:
+    - calibr8_cta
+    - field_group
+    - text
+    - view_mode_selector
+    - youtube
+third_party_settings:
+  field_group:
+    group_layout_settings:
+      children:
+        - field_view_mode
+        - field_paragraph_width
+        - field_background
+        - field_border
+        - field_title_align
+        - field_text_align
+      parent_name: ''
+      weight: 0
+      format_type: details
+      format_settings:
+        id: ''
+        classes: form-wrapper-layout-settings
+        open: false
+        required_fields: false
+      label: 'Layout settings'
+    group_title_wrapper:
+      children:
+        - field_title_style
+        - field_title
+      parent_name: ''
+      weight: 1
+      format_type: html_element
+      format_settings:
+        label: 'Title wrapper'
+        element: div
+        show_label: false
+        label_element: h3
+        required_fields: true
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: 'title-style-group clearfix'
+      label: 'Title wrapper'
+    group_subtitle_wrapper:
+      children:
+        - field_subtitle_style
+        - field_subtitle
+      parent_name: ''
+      weight: 2
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: 'title-style-group clearfix'
+        element: div
+        show_label: false
+        label_element: h3
+        required_fields: true
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Subtitle wrapper'
+    group_call_to_action:
+      children:
+        - field_call_to_action
+      parent_name: ''
+      weight: 5
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: true
+      label: 'Call to action'
+id: paragraph.video.default
+targetEntityType: paragraph
+bundle: video
+mode: default
+content:
+  field_background:
+    weight: 15
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_border:
+    weight: 16
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_call_to_action:
+    weight: 5
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+      classes: "link|Link\nbutton|Button (default)\nbutton button-primary|Button (primary)\nbutton button-secondary|Button (secondary)\nbutton button-grey|Button (grey)"
+      id: ''
+    third_party_settings: {  }
+    type: calibr8_cta_field_widget
+    region: content
+  field_paragraph_width:
+    weight: 14
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_subtitle:
+    weight: 7
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_subtitle_style:
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_text:
+    weight: 3
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_text_align:
+    weight: 18
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_title:
+    weight: 4
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_title_align:
+    weight: 17
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_title_style:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_video:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: youtube
+    region: content
+  field_view_mode:
+    weight: 13
+    settings: {  }
+    third_party_settings: {  }
+    type: view_mode_selector_select
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

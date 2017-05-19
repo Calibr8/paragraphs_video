@@ -1,0 +1,21 @@
+uuid: 0b798a40-5d38-4019-ae4c-c4a5cf982552
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_border
+    - paragraphs.paragraphs_type.video
+  module:
+    - options
+id: paragraph.video.field_border
+field_name: field_border
+entity_type: paragraph
+bundle: video
+label: Border
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

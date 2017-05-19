@@ -1,0 +1,23 @@
+uuid: 454cff3a-a7f0-497f-b74e-5de7f3e7b1d0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_text_align
+    - paragraphs.paragraphs_type.video
+  module:
+    - options
+id: paragraph.video.field_text_align
+field_name: field_text_align
+entity_type: paragraph
+bundle: video
+label: 'Text align'
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: left
+default_value_callback: ''
+settings: {  }
+field_type: list_string

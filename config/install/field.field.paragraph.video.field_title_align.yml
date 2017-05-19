@@ -1,0 +1,23 @@
+uuid: 14e9aca0-24fa-4a6d-84be-aff3d58a2ce3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title_align
+    - paragraphs.paragraphs_type.video
+  module:
+    - options
+id: paragraph.video.field_title_align
+field_name: field_title_align
+entity_type: paragraph
+bundle: video
+label: 'Title align'
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: left
+default_value_callback: ''
+settings: {  }
+field_type: list_string
